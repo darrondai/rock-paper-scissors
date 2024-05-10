@@ -9,6 +9,9 @@
 // scissors beats paper, loses to rock
 
 // planning
+// the program will not have a user interface, just the browser console
+// the inputs will be the user choice, which will be taken in through console commands
+// desired output is a string that says who wins
 
 // pseudocode
 
