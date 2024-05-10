@@ -22,8 +22,6 @@
 // DISPLAY the winner
 
 function getComputerChoice() {
-  // INITIALIZE empty string variable named computerChoice
-  let computerChoice = "";
   // INITIALIZE a integer variable named randNum and set its value to 0
   let randNum = 0;
   // CALCULATE a random number between 0 and 1 and set randnum to that value
@@ -37,15 +35,10 @@ function getComputerChoice() {
   // ELSE (value is 2), set computerChoice to scissors
   switch (randNum) {
     case 0:
-      computerChoice = "rock";
-      break;
+      return "rock";
     case 1:
-      computerChoice = "paper";
-      break;
+      return "paper";
     case 2:
-      computerChoice = "scissors";
-      break;
+      return "scissors";
   }
-  // RETURN computerChoice
-  return computerChoice;
 }
