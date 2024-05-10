@@ -23,11 +23,29 @@
 
 function getComputerChoice() {
   // INITIALIZE empty string variable named computerChoice
-  // CALCULATE a random number between 0 and 1
+  let computerChoice = "";
+  // INITIALIZE a integer variable named randNum and set its value to 0
+  let randNum = 0;
+  // CALCULATE a random number between 0 and 1 and set randnum to that value
+  randNum = Math.random();
   // MULTIPLY that random number by 3
+  randNum *= 3;
   // CALULATE the floor of the product
+  randNum = Math.floor(randNum);
   // IF value is 0, set computerChoice to rock
   // ELSE IF value is 1, set computerChoice to paper
   // ELSE (value is 2), set computerChoice to scissors
+  switch (randNum) {
+    case 0:
+      computerChoice = "rock";
+      break;
+    case 1:
+      computerChoice = "paper";
+      break;
+    case 2:
+      computerChoice = "scissors";
+      break;
+  }
   // RETURN computerChoice
+  return computerChoice;
 }
