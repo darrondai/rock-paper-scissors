@@ -21,4 +21,11 @@
 // CHECK who wins
 // DISPLAY the winner
 
-// divide and conquer
+// PSEUDOCODE
+// CALCULATE a random number between 0 and 1
+// MULTIPLY that random number by 3
+// CALULATE the floor of the product
+// IF value is 0, set computerChoice to rock
+// ELSE IF value is 1, set computerChoice to paper
+// ELSE (value is 2), set computerChoice to scissors
+function getComputerChoice() {}
