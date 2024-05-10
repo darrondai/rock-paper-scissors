@@ -14,5 +14,11 @@
 // desired output is a string that says who wins
 
 // pseudocode
+// INITIALIZE a empty string variable named playerInput
+// SET playerInput to a value inputted through the console
+// INITIALIZE a empty string variable named computerChoice
+// SET computerChoice to a value that is randomly calculated
+// CHECK who wins
+// DISPLAY the winner
 
 // divide and conquer
