@@ -42,3 +42,26 @@ function getComputerChoice() {
       return "scissors";
   }
 }
+
+function getHumanChoice() {
+  // INITIALIZE an empty string variable named humanChoice
+  let humanChoice = "";
+  // PROMPT the user for input
+  // SET humanChoice to the input string
+  humanChoice = prompt("input your choice of rock/paper/scissors: ");
+  // SET humanChoice to lowercase to ignore cases when validating
+  humanChoice = humanChoice.toLowerCase();
+  // VALIDATE user input is one of rock paper or scissors
+  // IF valid, return the humanChoice string variable
+  if (
+    humanChoice === "rock" ||
+    humanChoice === "paper" ||
+    humanChoice === "scissors"
+  ) {
+    return humanChoice;
+  }
+  // IF invalid, print out a message saying "please pick between rock/paper/scissors"
+  else {
+    alert("Invalid Choice, please pick between rock/paper/scissors");
+  }
+}
