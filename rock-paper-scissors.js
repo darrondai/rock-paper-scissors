@@ -30,9 +30,9 @@ function getComputerChoice() {
   randNum *= 3;
   // CALULATE the floor of the product
   randNum = Math.floor(randNum);
-  // IF value is 0, set computerChoice to rock
-  // ELSE IF value is 1, set computerChoice to paper
-  // ELSE (value is 2), set computerChoice to scissors
+  // IF value is 0, RETURN rock
+  // ELSE IF value is 1, RETURN paper
+  // ELSE (value is 2), RETURN scissors
   switch (randNum) {
     case 0:
       return "rock";
