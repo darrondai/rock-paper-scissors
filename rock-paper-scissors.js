@@ -21,10 +21,6 @@
 // CHECK who wins
 // DISPLAY the winner
 
-// global score variables
-let humanScore = 0;
-let computerScore = 0;
-
 function getComputerChoice() {
   // INITIALIZE a integer variable named randNum and set its value to 0
   let randNum = 0;
@@ -73,28 +69,41 @@ function getHumanChoice() {
   return humanChoice;
 }
 
-function playRound(humanChoice, computerChoice) {
+function playGame() {
+  // score variables
+  let humanScore = 0;
+  let computerScore = 0;
+
+  // beatBy map to determine win/loss/tie
   let beatBy = {
     rock: "paper",
     paper: "scissors",
     scissors: "rock",
   };
-  // IF humanChoice and computerChoice match, it is a tie, no roundwinner
-  if (humanChoice === computerChoice) {
-    console.log("It's a tie");
+
+  function playRound(humanChoice, computerChoice) {
+    // IF humanChoice and computerChoice match, it is a tie, no roundwinner
+    if (humanChoice === computerChoice) {
+      console.log("It's a tie");
+    }
+    // IF humanChoice beats computerChoice, human is roundwinner
+    else if (humanChoice === beatBy[computerChoice]) {
+      // PRINT out a string value representing the roundwinner
+      console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
+      // INCREMENT the round winner's score variable
+      humanScore++;
+    }
+    // ELSE computer is roundwinner
+    else {
+      // PRINT out a string value representing the roundwinner
+      console.log(`You Lose! ${humanChoice} loses to ${computerChoice}`);
+      // INCREMENT the round winner's score variable
+      computerScore++;
+    }
   }
-  // IF humanChoice beats computerChoice, human is roundwinner
-  else if (humanChoice === beatBy[computerChoice]) {
-    // PRINT out a string value representing the roundwinner
-    console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
-    // INCREMENT the round winner's score variable
-    humanScore++;
-  }
-  // ELSE computer is roundwinner
-  else {
-    // PRINT out a string value representing the roundwinner
-    console.log(`You Lose! ${humanChoice} loses to ${computerChoice}`);
-    // INCREMENT the round winner's score variable
-    computerScore++;
+
+  // PLAY 5 rounds
+  for (let step = 0; step < 5; step++) {
+    playRound(getHumanChoice(), getComputerChoice());
   }
 }
