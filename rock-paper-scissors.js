@@ -103,7 +103,8 @@ function playGame() {
   }
 
   // PLAY 5 rounds
-  for (let step = 0; step < 5; step++) {
+  for (let round = 0; round < 5; round++) {
+    console.log(`Round ${round + 1}`);
     playRound(getHumanChoice(), getComputerChoice());
   }
 }
