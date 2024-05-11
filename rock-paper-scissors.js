@@ -21,6 +21,10 @@
 // CHECK who wins
 // DISPLAY the winner
 
+// global score variables
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
   // INITIALIZE a integer variable named randNum and set its value to 0
   let randNum = 0;
