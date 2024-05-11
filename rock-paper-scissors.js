@@ -72,3 +72,29 @@ function getHumanChoice() {
   // RETURN humanChoice
   return humanChoice;
 }
+
+function playRound(humanChoice, computerChoice) {
+  let beatBy = {
+    rock: "paper",
+    paper: "scissors",
+    scissors: "rock",
+  };
+  // IF humanChoice and computerChoice match, it is a tie, no roundwinner
+  if (humanChoice === computerChoice) {
+    console.log("It's a tie");
+  }
+  // IF humanChoice beats computerChoice, human is roundwinner
+  else if (humanChoice === beatBy[computerChoice]) {
+    // PRINT out a string value representing the roundwinner
+    console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
+    // INCREMENT the round winner's score variable
+    humanScore++;
+  }
+  // ELSE computer is roundwinner
+  else {
+    // PRINT out a string value representing the roundwinner
+    console.log(`You Lose! ${humanChoice} loses to ${computerChoice}`);
+    // INCREMENT the round winner's score variable
+    computerScore++;
+  }
+}
