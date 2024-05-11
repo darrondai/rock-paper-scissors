@@ -62,13 +62,12 @@ function getHumanChoice() {
     humanChoice !== "scissors"
   ) {
     // PRINT out a message saying "please pick between rock/paper/scissors"
-    console.log("Invalid Choice, please pick between rock/paper/scissors");
+    alert("Invalid Choice, please pick between rock/paper/scissors");
     // ASK for user input and SET humanChoice to user input string
     // SET humanChoice to lowercase to ignore cases when validating
     humanChoice = prompt(
       "input your choice of rock/paper/scissors: "
     ).toLowerCase();
-    console.log(typeof humanChoice);
   }
   // RETURN humanChoice
   return humanChoice;
