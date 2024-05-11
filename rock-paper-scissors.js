@@ -108,3 +108,6 @@ function playGame() {
     playRound(getHumanChoice(), getComputerChoice());
   }
 }
+
+// Call playGame on webpage open
+playGame();
