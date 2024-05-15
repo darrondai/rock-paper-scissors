@@ -101,6 +101,22 @@ function playGame() {
       computerScore++;
     }
   }
+
+  const rockBtn = document.querySelector("#rock-btn");
+  const paperBtn = document.querySelector("#paper-btn");
+  const scissorsBtn = document.querySelector("#scissors-btn");
+
+  rockBtn.addEventListener("click", (e) => {
+    playRound("rock", getComputerChoice());
+  });
+
+  paperBtn.addEventListener("click", (e) => {
+    playRound("paper", getComputerChoice());
+  });
+
+  scissorsBtn.addEventListener("click", (e) => {
+    playRound("scissors", getComputerChoice());
+  });
 }
 
 // Call playGame on webpage open
