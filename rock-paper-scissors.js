@@ -84,16 +84,17 @@ function playGame() {
   const results = document.querySelector("#results");
 
   function playRound(humanChoice, computerChoice) {
+    const roundResult = document.createElement("p");
     // IF humanChoice and computerChoice match, it is a tie, no roundwinner
     if (humanChoice === computerChoice) {
       console.log("It's a tie");
-      results.textContent = "It's a tie";
+      roundResult.textContent = "It's a tie";
     }
     // IF humanChoice beats computerChoice, human is roundwinner
     else if (humanChoice === beatBy[computerChoice]) {
       // PRINT out a string value representing the roundwinner
       console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
-      results.textContent = `You Win! ${humanChoice} beats ${computerChoice}`;
+      roundResult.textContent = `You Win! ${humanChoice} beats ${computerChoice}`;
       // INCREMENT the round winner's score variable
       humanScore++;
     }
@@ -101,9 +102,16 @@ function playGame() {
     else {
       // PRINT out a string value representing the roundwinner
       console.log(`You Lose! ${humanChoice} loses to ${computerChoice}`);
-      results.textContent = `You Lose! ${humanChoice} loses to ${computerChoice}`;
+      roundResult.textContent = `You Lose! ${humanChoice} loses to ${computerChoice}`;
       // INCREMENT the round winner's score variable
       computerScore++;
+    }
+    results.textContent = `Player: ${humanScore} Computer: ${computerScore}`;
+    results.appendChild(roundResult);
+    if (humanScore === 5 || computerScore === 5) {
+      const winnerBanner = document.createElement("h3");
+      winnerBanner.textContent = (humanScore === 5) ? "Player Wins" : "Computer Wins";
+      results.appendChild(winnerBanner);
     }
   }
 
