@@ -101,12 +101,6 @@ function playGame() {
       computerScore++;
     }
   }
-
-  // PLAY 5 rounds
-  for (let round = 0; round < 5; round++) {
-    console.log(`Round ${round + 1}`);
-    playRound(getHumanChoice(), getComputerChoice());
-  }
 }
 
 // Call playGame on webpage open
